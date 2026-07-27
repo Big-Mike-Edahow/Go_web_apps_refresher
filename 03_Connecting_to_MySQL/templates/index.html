@@ -1,0 +1,42 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/style.css" type="text/css" rel="stylesheet">
+    <title>My Blog</title>
+</head>
+
+<body>
+    <main>
+        <figure>
+            <img src="../static/images/blogger.png" width="200px">
+        </figure>
+        <h1>All Blog Posts</h1>
+        <ul>
+            {{range .}}
+            <li>
+                <a href="/post/{{.ID}}">{{.Title}}</a> - <small><i>{{.Date}}</i></small>
+            </li>
+            {{else}}
+            <li>No posts available.</li>
+            {{end}}
+        </ul>
+        <br>
+        <hr>
+        <h2>Create a New Post</h2>
+        <form action="/post/create" method="POST">
+            <label>Title:</label><br>
+            <input type="text" name="title" required><br><br>
+            <label>Body:</label><br>
+            <textarea name="body" rows="2" cols="40" required></textarea><br><br>
+            <input type="submit" value="Publish Post">
+        </form>
+    </main>
+</body>
+
+</html>
+

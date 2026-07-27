@@ -1,0 +1,28 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/style.css" type="text/css" rel="stylesheet">
+    <title>Home</title>
+</head>
+
+<body>
+    <main>
+        <figure>
+            <img src="../static/images/blogger.png" width="200px">
+        </figure>
+        <h1>Homepage</h1>
+        {{range .}}
+        <div><a href="/page/{{.GUID}}">{{.Title}}</a></div>
+        <div>{{.TruncatedText}}</div>
+        <div>{{.Date}}</div>
+        {{end}}
+    </main>
+</body>
+
+</html>
+

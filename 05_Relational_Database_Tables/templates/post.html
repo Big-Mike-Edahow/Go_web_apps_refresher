@@ -1,0 +1,44 @@
+<!-- post.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/style.css" type="text/css" rel="stylesheet">
+    <title>{{.Post.Title}}</title>
+</head>
+
+<body>
+    <main>
+        <p><a href="/">&larr; Back to Home</a></p>
+
+        <section class="post">
+            <h1>{{.Post.Title}}</h1>
+            <p><small>Published on: {{.Post.CreatedAt}}</small></p>
+            <p style="white-space: pre-wrap;">{{.Post.Content}}</p>
+        </section>
+        <br>
+        <h3>Comments</h3>
+        <section class="comments-section">
+            <ul class="comment">
+                {{range .Comments}}
+                <li>{{.Content}} — <small>{{.CreatedAt}}</small></li>
+                {{else}}
+                <li>No comments yet.</li>
+                {{end}}
+            </ul>
+        </section>
+
+        <h3>Add a Comment</h3>
+        <form method="POST" action="/comment">
+            <input type="hidden" name="post_id" value="{{.Post.ID}}">
+            <input type="text" name="content" placeholder="Write a comment..." required>
+            <input type="submit" value="Submit Comment">
+        </form>
+    </main>
+</body>
+
+</html>
+
