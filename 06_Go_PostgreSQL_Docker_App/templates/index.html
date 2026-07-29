@@ -1,0 +1,35 @@
+<!-- index.html -->
+
+{{define "title"}}Home{{end}}
+{{define "content"}}
+
+<section class="center">
+    <h1 class="headline-h1">List of users</h1><br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .}}
+            <tr>
+                <td>{{ .ID }}</td>
+                <td>{{ .Name }}</td>
+                <td>{{ .Email }}</td>
+                <td>{{ .Created }}</td>
+            </tr>
+            {{else}}
+            <tr>
+                <td>No users available.</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</section>
+
+{{ end }}
+

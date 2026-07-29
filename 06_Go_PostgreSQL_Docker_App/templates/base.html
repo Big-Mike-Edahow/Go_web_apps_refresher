@@ -1,0 +1,33 @@
+<!-- base.html -->
+
+{{define "base"}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/images/favicon.ico" type="image/png" rel="shortcut icon">
+    <link href="../static/css/style.css" type="text/css" rel="stylesheet">
+    <title>{{template "title" .}} - Go Postgres Docker</title>
+</head>
+
+<body>
+    <nav>
+        <h1>Go Users List! 👤</h1>
+        <a href="/">Home 🏠</a>
+        <a href="/about">About ℹ️</a>
+    </nav>
+    <main>
+        {{template "content" .}}
+    </main>
+    <footer>
+        <p>Powered by <a href='https://golang.org/' target="_blank">Go</a></p>
+    </footer>
+</body>
+
+</html>
+
+{{end}}
+

@@ -1,0 +1,152 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    font-size: 12pt;
+}
+
+body {
+    color: #333;
+    background: #f9f9f9;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color: #F7F9FA;
+    border-bottom: 2px solid black;
+}
+
+nav h1 {
+    font-size: 2em;
+    font-weight: 600;
+    padding-left: 50px;
+    color: black;
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+
+nav>a {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 5px;
+    padding: 5px;
+    color: #34495E;
+    text-decoration: none;
+}
+
+main {
+    margin-top: 30px;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.headline-h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+table {
+    font-size: 0.9em;
+    font-family: sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 400px;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+table thead tr {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: dodgerblue;
+}
+
+th,
+td {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 12px 15px;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: rgb(193, 211, 229);
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid dodgerblue;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    place-items: center;
+}
+
+figure>img {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+}
+
+figcaption {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 5px;
+    padding: 5px;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: #F7F9FA;
+    border-top: 2px solid black;
+}
+
+footer>p {
+    font-size: 1.5em;
+    font-weight: 600;
+    font-style: italic;
+    color: black;
+}
+
+footer>p>a {
+    font-size: 1.2em;
+    font-weight: 600;
+    font-style: italic;
+    color: dodgerblue;
+    text-decoration: none;
+}
